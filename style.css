@@ -1,246 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-* {
+body {
+    background: linear-gradient(135deg, #e0e7ff 0%, #f4f4f4 100%);
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins' ,sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-body {
-    background-color: #f9f9f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 100vh;
-}
-.countainer {
-    position: relative;
+.upgrade-container {
+    background: rgba(255,255,255,0.95);
+    padding: 48px 36px 36px 36px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(60,60,120,0.10);
+    text-align: center;
+    max-width: 420px;
     width: 100%;
-    max-width: 1000px;
-    background:#fff;
-    margin: 50px;
-    box-shadow: 0 50px 75px rgba(0, 0, 0, 0.1);
-    border-left: 50px solid #fff;
-    border-right: 50px solid #fff;
+    transition: box-shadow 0.3s;
+    border: 1px solid #e0e7ff;
 }
-.countainer .top {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    padding: 40px;
-    padding-bottom: 0;
+
+.upgrade-container:hover {
+    box-shadow: 0 12px 40px rgba(60,60,120,0.18);
 }
-.countainer .top .imgBox {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
+
+.upgrade-image, .upgrade-icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
 }
-.countainer .top .imgBox .box {
-    position: relative;
-    width: 70%;
-    min-width: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    aspect-ratio: 1;
-}
-.countainer .top .imgBox .box img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; /* 100 */ 
+
+.upgrade-image {
+    width: 110px;
+    height: 110px;
     object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 22px;
+    box-shadow: 0 2px 12px rgba(60,60,120,0.10);
+    border: 3px solid #a5b4fc;
+    background: #f1f5ff;
 }
-.countainer .top .prfileText {
-    position: relative;
-    padding: 40px;
-    display: flex;
-    align-items: center;
-    margin-left: 52px;
+
+.upgrade-icon svg {
+    display: block;
+    margin: 0 auto 24px auto;
 }
-.countainer .top .prfileText h3 {
-    font-size: 3em;
-    letter-spacing: 0.1;
-    line-height: 1.2em;
-    font-weight: 600;
-    color: #333;
+
+h1 {
+    color: #3730a3;
+    font-size: 2.1rem;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
 }
-.countainer .top .prfileText h3 span {
-    position: relative;
-    font-size: 0.5em;
-    font-weight: 300;
-    top: -10px;
-}
-.countainer .contentBox {
-    position: relative;
-    min-height: 500px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    padding: 0 40px 40px;
-}
-.countainer .contentBox h3 {
-border-left: 4px solid #ff8bb3;
-padding-left: 10px;
-line-height: 1em;
-font-weight: 600;
-color: #333;
-letter-spacing: 0.1em;
-margin-bottom: 20px;
-margin-top: 50px;
-}
-.countainer .contentBox ul {
-    position: relative;
-    margin: 10px 0;
-}
-.countainer .contentBox ul li{
-    list-style: none;
-    margin: 25px 0;
-    line-height: 1em;
-    color: #333;
-    cursor: pointer;
-    display: flex;
-}
-.countainer .contentBox ul li ion-icon{
-    font-size: 1.2em;
-    margin-right: 10px;
-    color: #3590d2;
-}
-.countainer .contentBox ul.education li {
-    flex-direction: column;
-    margin: 25px 0;
-}
-h5 {
-    color: #3590d2;
-}
-h4 {
-    color: #333;
-    font-weight: 500;
-    margin: 5px 0;
-}
-h6 {
-    color: #666;
-    font-weight: 300;
-    font-size: 1em;
-}
-.language li {
-    flex-direction: column;
-}
-.language li span {
-    color: #333;
-    font-size: 16px;
-    font-weight: 500;
-}
-.language .percent {
-    position: relative;
-    width: 100%;
-    background: #e3e3e3;
-    height: 6px;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    overflow: hidden;
-}
-.language .percent div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background: #3590d2;
-}
-.countainer .contentBox ul.interest {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.countainer .contentBox ul.interest li{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 20px 0;
-}
-.countainer .contentBox ul.interest li .icon {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    background: #3590d2;
-    color: #fff;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.countainer .contentBox ul.interest li .icon ion-icon {
-    color: #fff;
-    margin-left: 0;
-    padding-left: 5px;
-}
+
 p {
-    font-style: 300;
+    color: #4b5563;
+    font-size: 1.13rem;
+    line-height: 1.7;
+    margin-bottom: 0;
 }
-.rightSide {
-    padding-left: 70px; /* 40 */
-}
-.about .box {
-    display: flex;
-    flex-direction: row;
-    margin: 20px 0;
-}
-.about .box .date {
-    min-width: 150px;
-    margin-bottom: 10px;
-}
-.about .box .data h5 {
-    color: #333;
-    font-weight: 600;
-}
-.about .box p {
-    text-align: justify;
-}
-.about .box .data h5:nth-child(1) {
-    color: #3590d2;
-}
-.about .box .text h4 {
-    color: #3590d2;
-    font-weight: 700;
-    font-size: 16px;
-    margin: 0;
-}
-.about.skills .box {
-    position: relative;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    justify-content: center;
-    align-items: center;
-}
-.about.skills .box h4 {
-    color: #333;
-    font-weight: 300;
-    margin-bottom: 5px;
-}
-.about.skills .box .percent {
-    position: relative;
-    width: 100%;
-    height: 10px;
-    background: #e3e3e3;
-    border-radius: 10%;
-}
-.about.skills .box .percent div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background: #3590d2;
-    border-radius: 10%;
-}
-.courses li .text h4 {
-    color: #333;
-    font-weight: 700;
-    font-size: 16px;
-}
-.courses li .text span {
-    color: #666;
-    font-weight: 200;
-    font-size: 0.8em;
+
+@media (max-width: 600px) {
+    .upgrade-container {
+        padding: 28px 10px 20px 10px;
+        max-width: 95vw;
+    }
+    .upgrade-image {
+        width: 80px;
+        height: 80px;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+    p {
+        font-size: 1rem;
+    }
 }
